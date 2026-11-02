@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lisculpt · Guilherme Nunes</title>
+<meta name="description" content="Lisculpt: a portfolio platform made only for sculpture. Research, product design and full build by Guilherme Nunes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0b0b'/><rect x='18' y='18' width='10' height='10' fill='%23ff4f00'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="../">Guilherme Nunes<span>.</span></a>
+    <ul>
+      <li><a href="../#work">Work</a></li>
+      <li><a href="../#method">Method</a></li>
+      <li><a href="../#foundation">Foundation</a></li>
+      <li><a href="../#about">About</a></li>
+      <li><a class="cta" href="../#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="case-hero">
+  <div class="wrap">
+    <a class="back" href="../#work">← All work</a>
+    <div style="margin-top:28px"><span class="tag hot">Live</span> <span class="tag ghost">Product</span> <span class="tag ghost">Research</span> <span class="tag ghost">Full stack</span></div>
+    <h1>Lisculpt</h1>
+    <p class="sub">A portfolio platform made only for sculpture, where each piece is presented with the care of a museum catalogue entry.</p>
+  </div>
+  <div class="wrap" style="padding:0">
+    <div class="factbar"><div><small>Role</small><strong>Founder, designer, developer</strong></div><div><small>Team</small><strong>Solo, with AI agents</strong></div><div><small>Year</small><strong>2026</strong></div><div><small>Status</small><strong>Live</strong></div><div><small>Link</small><strong><a href="https://lisculpt.com" target="_blank" rel="noopener">lisculpt.com ↗</a></strong></div></div>
+  </div>
+</header>
+<main>
+<div class="wrap" style="padding:0"><div class="figs"><figure><img src="../assets/shots/lisculpt-home.webp" alt="Lisculpt home page on desktop, with a featured sculptor and filters for material, country and style"><figcaption>Home on desktop: a featured artist chosen by curation, then the latest work from each sculptor.</figcaption></figure><figure><img src="../assets/shots/lisculpt-mobile.webp" alt="Lisculpt home page on a phone"><figcaption>Same page on a phone.</figcaption></figure></div></div>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>01</small>The problem</h2><div><p>At a sculpture course I met many talented artists who struggled to promote and sell their own work. Generic portfolio platforms mix sculpture with illustration, photography and graphic design, and it gets lost there. A sculpture also needs context a flat image does not carry: material, dimensions, technique.</p><p>As a UI/UX designer and developer, I asked a simple question: what if there was a place on the internet made only for sculptors to show and sell their work?</p></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>02</small>Listening first</h2><div><p>Before building anything I interviewed sculptors and confirmed the need was real. Then came a research phase on how museums and collections describe works and artists, and which data standards they use. In parallel I showed prototypes and screens to sculptors and adjusted from what they said.</p><ul><li>Interviews with working sculptors to validate the need</li><li>Artwork data modelled on museum cataloguing standards, so the catalogue can later talk to institutions, researchers and other art databases</li><li>Prototype rounds with artists before and during the build</li></ul></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>03</small>A decision the artists changed</h2><div><p class="pull">The first version was an <em>invite-only</em> curated directory.</p><p>Feedback from the artists themselves changed that. They wanted to set up their portfolio on the spot, without asking and waiting. So signup became open to any sculptor: two short steps, and you land straight in your own studio. Curation moved to what is already published, from an admin tool.</p><p>One gate stayed on purpose. Images remain the artist's. Before a work goes live, the artist authorises the display of that specific piece, and that consent is recorded on the server before publishing. Use of the artist's own image is a separate choice they can withdraw at any time.</p></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>04</small>Art direction</h2><div><p>The interface steps back so the work can show. The reference is not social media but the museum: the pale wall, the discreet label next to the piece, the printed catalogue.</p><ul><li><b>Tone.</b> Institutional and welcoming, the way a museum talks to an artist.</li><li><b>Type.</b> Cormorant Garamond for titles, recalling catalogues and museum plaques. Syne, uppercase and widely spaced, for labels and navigation.</li><li><b>Images.</b> Large photos with no decoration.</li><li><b>Artwork page.</b> An encyclopedia-style info box (material, dimensions, technique, style) and several images of the same piece.</li></ul><table><tr><th>Colour</th><th>Use</th><th>Code</th></tr><tr><td><span class="swatch" style="background:#F2EFE9"></span>Parchment</td><td>Background</td><td>#F2EFE9</td></tr><tr><td><span class="swatch" style="background:#0D0D0D"></span>Ink</td><td>Text and titles</td><td>#0D0D0D</td></tr><tr><td><span class="swatch" style="background:#7A7770"></span>Warm grey</td><td>Secondary information</td><td>#7A7770</td></tr><tr><td><span class="swatch" style="background:#C8C5BF"></span>Stone</td><td>Lines and dividers</td><td>#C8C5BF</td></tr></table></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>05</small>How it's built</h2><div><p>I designed and built the whole thing, orchestrating AI coding agents for the heavy lifting while keeping the architecture and every product decision in my hands.</p><ul><li>Static front end in HTML, CSS and JavaScript, bilingual (Portuguese and English)</li><li>Supabase for auth, database and storage</li><li>Continuous deploy from GitHub to the host with a GitHub Action</li><li>Artist studio for profiles and works, plus an admin tool for curation (featured artist, publication, removal)</li><li>Public gallery filtered by material, country and style, with a page for every artist and every piece</li></ul></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>06</small>Where it stands</h2><div><ul><li>Live at <a href="https://lisculpt.com" target="_blank" rel="noopener">lisculpt.com</a>, open to sculptors from any country</li><li>Twelve artists published at launch, with 30 to 40 works</li><li>Invited to present the project at a local gallery</li><li>Partnership with a sculpting school</li><li>Scope already reaching neighbouring crafts: ceramics, printmaking, 3D modelling and digital sculpture, toy art</li></ul><p>Next: social channels as an extension of the gallery, direct sales through the artist, a printable certificate of authenticity, and a portfolio export galleries accept. One principle runs through every phase: portfolios are always free.</p></div></div></section>
+<div class="wrap" style="padding:0"><nav class="next" aria-label="More cases">
+  <a href="wasteland-warlord.html"><small>← Previous</small><strong>Wasteland Warlord</strong></a>
+  <a href="balance.html"><small>Next →</small><strong>Balance</strong></a>
+</nav></div>
+</main>
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <p class="big"><a href="mailto:guilnunes@gmail.com">Let's build<br>something →</a></p>
+    <div class="links">
+      <a href="mailto:guilnunes@gmail.com">Email</a>
+      <a href="https://www.behance.net/guilnunes" target="_blank" rel="noopener">Behance</a>
+      <a href="https://github.com/guilnunes" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="fine"><span>© 2026 Guilherme Nunes · São Paulo, Brazil</span><span><a href="../">Back to home</a></span></div>
+  </div>
+</footer>
+</body>
+</html>

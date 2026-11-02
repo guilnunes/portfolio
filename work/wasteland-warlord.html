@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wasteland Warlord · Guilherme Nunes</title>
+<meta name="description" content="Wasteland Warlord: systems architecture for a solo-developed post-apocalyptic RPG in Unity, by Guilherme Nunes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0b0b'/><rect x='18' y='18' width='10' height='10' fill='%23ff4f00'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="../">Guilherme Nunes<span>.</span></a>
+    <ul>
+      <li><a href="../#work">Work</a></li>
+      <li><a href="../#method">Method</a></li>
+      <li><a href="../#foundation">Foundation</a></li>
+      <li><a href="../#about">About</a></li>
+      <li><a class="cta" href="../#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="case-hero">
+  <div class="wrap">
+    <a class="back" href="../#work">← All work</a>
+    <div style="margin-top:28px"><span class="tag hot">In development</span> <span class="tag ghost">Systems design</span> <span class="tag ghost">Unity</span> <span class="tag ghost">Game design</span></div>
+    <h1>Wasteland Warlord</h1>
+    <p class="sub">A post-apocalyptic strategy RPG, and a study in turning a very large design into a structure that can be built by one person.</p>
+  </div>
+  <div class="wrap" style="padding:0">
+    <div class="factbar"><div><small>Role</small><strong>Solo designer, developer</strong></div><div><small>Engine</small><strong>Unity</strong></div><div><small>Docs</small><strong>Notion GDD</strong></div><div><small>Status</small><strong>In development</strong></div><div><small>Focus</small><strong>Systems architecture</strong></div></div>
+  </div>
+</header>
+<main>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>01</small>Why a game is in this portfolio</h2><div><p>Wasteland Warlord is a post-apocalyptic strategy RPG that I design and develop alone in Unity. It is here because it is the clearest example of how I think about systems: a game is a product where every rule touches every other rule, and the only way to keep it sane is architecture.</p><p class="pull" style="margin-top:24px">A huge design document is worthless until it becomes <em>a structure you can build</em>.</p></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>02</small>Five engines</h2><div><p>The game design document is large: factions, religions, economies, combat, clothing, music. I partitioned all of it into five engines with clear boundaries, so every new idea has exactly one home.</p><div class="engines-diagram"><div><b>01</b>Simulation Core</div><div><b>02</b>Entity &amp; Modifier Engine</div><div><b>03</b>World State &amp; Economy</div><div><b>04</b>Encounter &amp; Event Engine</div><div><b>05</b>Memory &amp; Persistence</div></div></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>03</small>One model for everything that changes a character</h2><div><p>Statuses, conditions and traits usually grow into three tangled systems. Here they are one type: the Modifier. A wound, a faction trait and a slave mark all use the same structure, so they stack, expire and interact under the same rules.</p><ul><li><b>Three health scales.</b> Physical, mental and social, each from −20 to +20</li><li><b>Combat.</b> A 15-rung attack ladder with range bands and sub-actions</li><li><b>Population.</b> 24 character archetypes across hostile, neutral and settlement bands</li><li><b>Economy.</b> Brass currency, relic cells and a six-axis item valuation model</li></ul><p>The modifier pattern proved so useful that I extracted it into a reusable template for my other game projects.</p></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>04</small>From document to running build</h2><div><ul><li>Working hex world map with fog of war, day cycle and resource drain</li><li>ScriptableObject architecture, so design data lives outside code</li><li>A six-layer view stack for the hex map</li><li>Art direction with eight visual pillars, a five-state day and night palette and a portrait system</li><li>Audio direction built on contrast: held breath while exploring, screams in combat, with morale shaping the tonality</li></ul></div></div></section>
+<section class="wrap" style="padding:0"><div class="block"><h2><small>05</small>How AI fits</h2><div><p>The design document lives in Notion and is written and audited with AI agents across separate workstreams (lore, systems, art, audio, Unity). A consistency audit across about 22 pages caught contradictions before they reached code. The same agents help write Unity editor tooling, so design changes reach the build without manual steps.</p></div></div></section>
+<div class="wrap" style="padding:0"><nav class="next" aria-label="More cases">
+  <a href="amazon-health.html"><small>← Previous</small><strong>Amazon health</strong></a>
+  <a href="lisculpt.html"><small>Next →</small><strong>Lisculpt</strong></a>
+</nav></div>
+</main>
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <p class="big"><a href="mailto:guilnunes@gmail.com">Let's build<br>something →</a></p>
+    <div class="links">
+      <a href="mailto:guilnunes@gmail.com">Email</a>
+      <a href="https://www.behance.net/guilnunes" target="_blank" rel="noopener">Behance</a>
+      <a href="https://github.com/guilnunes" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="fine"><span>© 2026 Guilherme Nunes · São Paulo, Brazil</span><span><a href="../">Back to home</a></span></div>
+  </div>
+</footer>
+</body>
+</html>
